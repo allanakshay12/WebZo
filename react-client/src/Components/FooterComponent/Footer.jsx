@@ -4,7 +4,7 @@ class Footer extends Component {
     return (
       <footer>
         <div>
-          <div className="FootButton">Footer component</div>
+          <div className="Footer-Content">Please contact +91-9663829842 for any additional queries.</div>
         </div>
       </footer>
     )
