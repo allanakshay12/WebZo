@@ -4,7 +4,7 @@ import VideoPlayer from './VideoComponent/VideoPlayer';
 import NavBar from './HeaderComponent/NavBar';
 import FootBar from './FooterComponent/Footer';
 
-class HomePage extends Component {
+class AboutUs extends Component {
   render() {
     return (
       <div>
@@ -20,4 +20,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+export default AboutUs;

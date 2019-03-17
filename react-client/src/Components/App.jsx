@@ -2,17 +2,21 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import { browserHistory } from 'react-router';
 import HomePage from './HomePage';
-import NavBar from './HeaderComponent/NavBar';
-import FootBar from './FooterComponent/Footer';
+import Testimonials from './Testimonials';
+import Products from './Products';
+import AboutUs from './AboutUs';
+import LoginPage from './LoginPage';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <NavBar />
           <Route name="home" exact path="/" component={HomePage} />
-          <FootBar />
+          <Route name="testimonials" exact path="/testimonials" component={Testimonials} />
+          <Route name="products" exact path="/products" component={Products} />
+          <Route name="aboutus" exact path="/aboutus" component={AboutUs} />
+          <Route name="loginpage" exact path="/loginpage" component={LoginPage} />
         </div>
       </Router>
     )
