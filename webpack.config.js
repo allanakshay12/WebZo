@@ -26,6 +26,14 @@ module.exports = {
         loader: 'file-loader'
       },
       {
+        test: /\.html$/,
+        loader: 'html-loader?attrs[]=video:src'
+      }, 
+      {
+        test: /\.mp4$/,
+        loader: 'url?limit=10000&mimetype=video/mp4'
+      },
+      {
         test : /\.jsx?/,
         include : SRC_DIR,
         loader : 'babel-loader',      
