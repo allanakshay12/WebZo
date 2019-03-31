@@ -27,7 +27,6 @@ footer {
     height: 50px;
     background-color: rgba(30,30,30,30);
     color: white;
-    
 }
 .Footer-Content {
     color: white;
@@ -40,4 +39,25 @@ footer {
 .Page-Content {
     background-clip: rgba(30,30,30,30);
     margin-top: 0px;
+}
+
+/*Login Page*/
+#LoginPageJumbotron {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.LoginPageElement {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.LoginPageButton {
+    width: 100%;
+}
+
+/*Testimonial Page*/
+.TestimonialImage {
+    width: 70px;
+    margin-right: 10px;
 }
