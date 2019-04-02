@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Carousel from './CarouselComponent/Carousel';
-import VideoPlayer from './VideoComponent/VideoPlayer';
+import Location from './AboutUsComponent/Location';
 import NavBar from './HeaderComponent/NavBar';
 import FootBar from './FooterComponent/Footer';
+import Content from './AboutUsComponent/AboutUsContent';
+import Contact from './AboutUsComponent/ContactDetails';
 
 class AboutUs extends Component {
   render() {
@@ -10,10 +11,12 @@ class AboutUs extends Component {
       <div>
         <NavBar />
         <div className="Page-Content">
-          
-          <VideoPlayer />
-          
+          <Content />
+          <Location />
+          <Contact />
         </div>
+        <br />
+        <br />
         <FootBar />
       </div>
     )

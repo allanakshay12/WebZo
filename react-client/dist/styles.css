@@ -61,3 +61,57 @@ footer {
     width: 70px;
     margin-right: 10px;
 }
+
+/*About Us Page*/
+#googleMap {
+    width:100%;
+    height:400px;
+    border:0;
+}
+
+/*Products Page*/
+.ProductCarouselImage {
+    object-fit: none; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    width: 100%;
+    max-height: 550px;
+    margin-bottom: 1rem;
+}
+
+.carousel-caption {
+    color: black;
+}
+
+.carousel-indicators>li {
+    color: black; 
+    background-color: black;
+    border-color: black;
+}
+
+.CarouselContainer>h2 {
+    text-align: center;
+}
+
+.CarouselContainer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.ProductCarousel {
+    min-height: 50%;
+    max-height: 50%;
+}
+
+
+/*General Content*/
+
+.jumbotron {
+    background-color: rgb(51,122,183);
+    color: white;
+}
+
+.btn-primary {
+    background-color: white;
+    color: black;
+}
+

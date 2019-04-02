@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Carousel from './CarouselComponent/Carousel';
-import VideoPlayer from './VideoComponent/VideoPlayer';
 import NavBar from './HeaderComponent/NavBar';
 import FootBar from './FooterComponent/Footer';
 
@@ -11,7 +10,7 @@ class Products extends Component {
         <NavBar />
         <div className="Page-Content">
           
-          <VideoPlayer />
+          <Carousel />
           
         </div>
         <FootBar />

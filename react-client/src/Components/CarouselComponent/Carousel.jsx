@@ -1,92 +1,62 @@
 import React, { Component } from 'react';
+import ProductCarousel1 from '../../assets/images/ProductCarousel1.jpg';
+import ProductCarousel2 from '../../assets/images/ProductCarousel2.png';
+import ProductCarousel3 from '../../assets/images/ProductCarousel3.png';
 class Carousel extends Component {
   render() {
     return (
-        <div id="video-carousel-example2" class="carousel slide carousel-fade" data-ride="carousel">
-          {/*<!--Indicators-->*/}
+      <div class="container CarouselContainer">
+        <h2>Our Product Highlights</h2>
+        <div id="myCarousel" class="carousel slide ProductCarousel" data-ride="carousel">
+          {/*<!-- Indicators -->*/}
           <ol class="carousel-indicators">
-            <li data-target="#video-carousel-example2" data-slide-to="0" class="active"></li>
-            <li data-target="#video-carousel-example2" data-slide-to="1"></li>
-            <li data-target="#video-carousel-example2" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
           </ol>
-          {/*<!--/.Indicators-->*/}
-          {/*<!--Slides-->*/}
-          <div class="carousel-inner" role="listbox">
-            {/*<!-- First slide -->*/}
-            <div class="carousel-item active">
-              {/*<!--Mask color-->*/}
-              <div class="view">
-                {/*<!--Video source-->*/}
-                <video class="video-fluid" autoplay loop muted>
-                  <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
-                </video>
-                <div class="mask rgba-indigo-light"></div>
-              </div>
-        
-              {/*<!--Caption-->*/}
+      
+          {/*<!-- Wrapper for slides -->*/}
+          <div class="carousel-inner ProductCarousel">
+      
+            <div class="item active">
+              <img src={ProductCarousel1} alt="Los Angeles" class="ProductCarouselImage" />
               <div class="carousel-caption">
-                <div class="animated fadeInDown">
-                  <h3 class="h3-responsive">Light mask</h3>
-                </div>
+                <h3>Hercules Roadeo</h3>
+                <p>Find the youth within you!!</p>
               </div>
-              {/*<!--Caption-->*/}
             </div>
-            {/*<!-- /.First slide -->*/}
-        
-            {/*<!-- Second slide -->*/}
-            <div class="carousel-item">
-              {/*<!--Mask color-->*/}
-              <div class="view">
-                {/*<!--Video source-->*/}
-                <video class="video-fluid" autoplay loop muted>
-                  <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" />
-                </video>
-                <div class="mask rgba-purple-slight"></div>
-              </div>
-        
-              {/*<!--Caption-->*/}
+      
+            <div class="item">
+              <img src={ProductCarousel2} alt="Chicago" class="ProductCarouselImage"/>
               <div class="carousel-caption">
-                <div class="animated fadeInDown">
-                  <h3 class="h3-responsive">Super light mask</h3>
-                </div>
+                <h3>BTwin Riverside</h3>
+                <p>For a Comfortable Ride!</p>
               </div>
-              {/*<!--Caption-->*/}
             </div>
-            {/*<!-- /.Second slide -->*/}
-        
-            {/*<!-- Third slide -->*/}
-            <div class="carousel-item">
-              {/*<!--Mask color-->*/}
-              <div class="view">
-                {/*<!--Video source-->*/}
-                <video class="video-fluid" autoplay loop muted>
-                  <source src="https://mdbootstrap.com/img/video/cube.mp4" type="video/mp4" />
-                </video>
-                <div class="mask rgba-black-strong"></div>
-              </div>
-        
-              {/*<!--Caption-->*/}
+          
+            <div class="item">
+              <img src={ProductCarousel3} alt="New York" class="ProductCarouselImage"/>
               <div class="carousel-caption">
-                <div class="animated fadeInDown">
-                  <h3 class="h3-responsive">Strong mask</h3>
-                </div>
+                <h3>Montra MadRock</h3>
+                <p>Rock the World!</p>
               </div>
-              {/*<!--Caption-->*/}
             </div>
-            {/*<!-- /.Third slide -->*/}
+        
           </div>
-          {/*<!--/.Slides-->*/}
-          {/*<!--Controls-->*/}
-          <a class="carousel-control-prev" href="#video-carousel-example2" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      
+          {/*<!-- Left and right controls -->*/}
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#video-carousel-example2" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
           </a>
-          {/*<!--/.Controls-->*/}
         </div>
+      </div>
+   
+      
     )
   }
 }
