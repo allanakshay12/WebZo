@@ -16,6 +16,7 @@ class LoginBox extends Component {
                 </div>
                 <button type="submit" class="btn btn-primary LoginPageElement LoginPageButton">Log In</button>
             </form>
+            <p id='loginpagesignupoption'>Haven't Created an Account yet? <a href='/signuppage' id='loginpagesignupanchor'>Sign up</a> Instead!</p>
             </div>
         </div>
     )

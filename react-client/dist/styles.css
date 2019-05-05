@@ -56,6 +56,23 @@ footer {
     width: 100%;
 }
 
+#loginpagesignupoption {
+    font-size: 20px;
+}
+
+#loginpagesignupanchor:link{
+    color: rgb(0, 0, 0);
+}
+
+#loginpagesignupanchor:visited{
+    color: rgb(0, 0, 0);
+}
+
+#loginpagesignupanchor:hover{
+    color: rgb(255, 255, 255);
+}
+
+
 /*Testimonial Page*/
 .TestimonialImage {
     width: 70px;

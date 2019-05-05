@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import NavBar from './HeaderComponent/NavBar';
 import FootBar from './FooterComponent/Footer';
-import LoginComponent from './LoginComponent/LoginBox'
+import SignUpPageComponent from './SignUpComponent/SignUpBox'
 
-class LoginPage extends Component {
+class SignUpPage extends Component {
   render() {
     return (
       <div>
         <NavBar />
-        <LoginComponent />
+        <SignUpPageComponent />
         <FootBar />
       </div>
     )
   }
 }
 
-export default LoginPage;
+export default SignUpPage;
