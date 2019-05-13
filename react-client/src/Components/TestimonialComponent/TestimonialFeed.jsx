@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
-import avatar from '../../assets/images/img_avatar1.png';
+import TestimonialList from './TestimonialList';
 class TestimonialFeed extends Component {
+
+    constructor(props)
+    {
+      super(props);
+  
+      this.state = {
+        items: []
+      };
+      
+      var newitem = [];
+      fetch(`http://localhost:8080/testimonials/get`)
+      .then(res => res.json())
+      .then(data => newitem = data)
+      .then( () => this.setState ( (prevState) => { return { items: prevState.items.concat(newitem) } } ))
+      .then( () => console.log(this.state.items));
+  
+      
+  
+    }
+
   render() {
+
     return (
-        <div class="container" id="LoginPageJumbotron">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3>Title</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="media">
-                        <div class="media-left media-middle">
-                            <img src={avatar} class="media-object TestimonialImage" />
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Name</h3>
-                            <p>Content</p>
-                        </div>
-                        </div>
-                    </div>
-            </div>
-        </div>
+
+        <TestimonialList entries={this.state.items}/>
+
+        
     )
   }
 }

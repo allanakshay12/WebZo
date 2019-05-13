@@ -4,6 +4,7 @@ import FootBar from './FooterComponent/Footer';
 import LoginComponent from './LoginComponent/LoginBox'
 
 class LoginPage extends Component {
+
   render() {
     return (
       <div>

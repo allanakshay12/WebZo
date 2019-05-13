@@ -34,7 +34,7 @@ class TestimonialSubmit extends Component {
         console.log(this.state.items);
 
       }
-      e.preventDefault();
+      
   }
 
   render() {

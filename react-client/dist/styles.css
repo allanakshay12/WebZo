@@ -112,13 +112,21 @@ footer {
 .CarouselContainer {
     margin-top: 50px;
     margin-bottom: 50px;
+    width: 100%;
 }
 
 .ProductCarousel {
     min-height: 50%;
     max-height: 50%;
+    width: 100%;
 }
 
+/*Product List*/
+
+ul {
+    padding: 0px;
+    margin: 0px;
+}
 
 /*General Content*/
 
