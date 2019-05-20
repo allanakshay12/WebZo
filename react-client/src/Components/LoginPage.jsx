@@ -8,9 +8,9 @@ class LoginPage extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+      
         <LoginComponent />
-        <FootBar />
+       
       </div>
     )
   }

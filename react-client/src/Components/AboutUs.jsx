@@ -9,7 +9,7 @@ class AboutUs extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        
         <div className="Page-Content">
           <Content />
           <Location />
@@ -17,7 +17,7 @@ class AboutUs extends Component {
         </div>
         <br />
         <br />
-        <FootBar />
+        
       </div>
     )
   }

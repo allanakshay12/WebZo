@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import logo from '../../assets/logo/logo.png';
 
 class NavBar extends Component {
- 
+
+  
   render() {
-    {/*CurrentPage = () => {
-      page: 0
-    }*/}
     return (
       <header>
         <nav class="navbar navbar-default">
@@ -29,7 +27,7 @@ class NavBar extends Component {
                 <li><a href="/aboutus">About Us</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="/loginpage"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="/loginpage" id="navbar_login"><span class="glyphicon glyphicon-log-in"></span> Account</a></li>
               </ul>
             </div>
           </div>

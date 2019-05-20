@@ -17,6 +17,7 @@ class LoginBox extends Component {
     .then( () => console.log(this.state.items));
 
     this.Authenticate = this.Authenticate.bind(this);
+    
 
   }
 
@@ -32,12 +33,19 @@ class LoginBox extends Component {
     for(i = 0; i<this.state.items.length; i++) {
       if((this.state.items[i].email == tempuser.email) && (this.state.items[i].password == tempuser.password)) {
         flag = 1;
+        break;
       }
     } 
     if(flag==0) {
       window.location.replace('http://localhost:8080/signuppage');
+      localStorage["LoggedIn"] = "false";
     } else {
       window.location.replace('http://localhost:8080/');
+      localStorage["LoggedIn"] = "true";
+      localStorage["name"] = this.state.items[i].name;
+      localStorage["email"] = this.state.items[i].email;
+      localStorage["contact_no"] = this.state.items[i].contact_no;
+     
     }
 
     e.preventDefault();

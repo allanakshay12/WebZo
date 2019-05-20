@@ -30,7 +30,7 @@ class Products extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        
         <div className="Page-Content">
           
           <Carousel />
@@ -44,8 +44,13 @@ class Products extends Component {
           
           <ProductList entries={this.state.items}/>
 
+          <br />
+          <br />
+          <div class = "container jumbotron">
+            <p id='loginpagesignupoption'>Click <a href='/addproducts' id='loginpagesignupanchor'>here</a> to add more products.</p>
+          </div>
         </div>
-        <FootBar />
+      
       </div>
     )
   }

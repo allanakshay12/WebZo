@@ -60,6 +60,17 @@ app.get('/products/get', (req, res) => {
   });
 });
 
+app.get('/addproductstuff/add', (req, res) => {
+  const { model_name, model_no, qty, description, price, picture  } = req.query;
+  INSERT_INTO_PRODUCTS_QUERY = `INSERT INTO products (model_no, model_name, qty, description, picture, price) VALUES (${model_no}, '${model_name}', ${qty}, '${description}', '${picture}', ${price})`;
+  con.query(INSERT_INTO_PRODUCTS_QUERY, (err, results) => {
+    if(err) {
+      return res.send(err);
+    }
+    
+  });
+});
+
 app.get('/loginpage/get', (req, res) => {
   SELECT_FROM_AUTHENTICATION_QUERY = `SELECT * FROM authentication`;
   con.query(SELECT_FROM_AUTHENTICATION_QUERY, (err, results) => {
@@ -85,6 +96,27 @@ app.get('/signuppage/add', (req, res) => {
     
   });
 });
+
+app.get('/orders/add', (req, res) => {
+  const { transaction_id, contact_no, address, model_no } = req.query;
+ 
+  INSERT_INTO_ORDERS_QUERY = `INSERT INTO orders (transaction_id, contact_no, address, model_no) VALUES ('${transaction_id}', '${contact_no}', '${address}', ${model_no})`;
+  PRODUCTS_QUERY = `UPDATE products SET qty=qty-1 where model_no = ${model_no}`
+  con.query(INSERT_INTO_ORDERS_QUERY, (err, results) => {
+    if(err) {
+      return res.send(err);
+    }
+    
+  });
+  con.query(PRODUCTS_QUERY, (err, results) => {
+    if(err) {
+      return res.send(err);
+    }
+    
+  });
+});
+
+
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(`${__dirname}/../react-client/dist/index.html`));

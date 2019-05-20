@@ -7,10 +7,25 @@ import Products from './Products';
 import AboutUs from './AboutUs';
 import LoginPage from './LoginPage';
 import SignUpPage from './SignUpPage';
+import NavBar from './HeaderComponent/NavBar';
+import Footer from './FooterComponent/Footer';
+import Orders from './Order';
+import AddProducts from './AddProducts';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    if(localStorage["LoggedIn"]=="true") {
+      console.log("This is so true!")
+      {/*document.getElementById("navbar_login").textContent= "";*/}
+    }
+  }
+
   render() {
     return (
+      <div>
+      <NavBar />
       <Router>
         <div>
           <Route name="home" exact path="/" component={HomePage} />
@@ -19,8 +34,12 @@ class App extends Component {
           <Route name="aboutus" exact path="/aboutus" component={AboutUs} />
           <Route name="loginpage" exact path="/loginpage" component={LoginPage} />
           <Route name="signuppage" exact path="/signuppage" component={SignUpPage} />
+          <Route name="orderpage" exact path="/orders" component={Orders} />
+          <Route name="addproducts" exact path="/addproducts" component={AddProducts} />
         </div>
       </Router>
+      <Footer />
+      </div>
     )
   }
 }

@@ -8,14 +8,14 @@ class Testimonials extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        
         <div className="Page-Content">
           
           <TestimonialFeed />
           <TestimonialSubmit />
 
         </div>
-        <FootBar />
+        
       </div>
     )
   }
