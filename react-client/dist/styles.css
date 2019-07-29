@@ -1,3 +1,14 @@
+/*General*/
+
+#generalbackground {
+    background-color: rgba(50,50,50,50);
+}
+
+h2 {
+    color: white;
+}
+
+
 /*NavBar*/
 
 .navbar-default {
@@ -88,7 +99,7 @@ footer {
 
 /*Products Page*/
 .ProductCarouselImage {
-    object-fit: none; /* Do not scale the image */
+    object-fit: contain; /* Do not scale the image */
     object-position: center; /* Center the image within the element */
     width: 100%;
     max-height: 550px;
@@ -96,7 +107,7 @@ footer {
 }
 
 .carousel-caption {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .carousel-indicators>li {
@@ -113,6 +124,7 @@ footer {
     margin-top: 50px;
     margin-bottom: 50px;
     width: 100%;
+    height: auto;
 }
 
 .ProductCarousel {
@@ -131,7 +143,7 @@ ul {
 /*General Content*/
 
 .jumbotron {
-    background-color: rgb(51,122,183);
+    background-color: rgba(51,122,183, 0.8);
     color: white;
 }
 
@@ -140,3 +152,10 @@ ul {
     color: black;
 }
 
+/*Order Page*/
+#order_image {
+    height: auto;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}

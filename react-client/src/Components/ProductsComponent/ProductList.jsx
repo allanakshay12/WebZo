@@ -8,14 +8,18 @@ class ProductList extends Component {
         this.CreateProducts = this.CreateProducts.bind(this);
     }
 
+    order_func(item) {
+        localStorage.setItem("model_no", item.model_no);
+        localStorage.setItem("model_name", item.model_name);
+        localStorage.setItem("qty", item.qty);
+        localStorage.setItem("description", item.description);
+        localStorage.setItem("picture", item.picture);
+        localStorage.setItem("price", item.price);
+        window.location.replace(`http://localhost:8080/orders`);
+    }
+
     CreateProducts(item) {
-        localStorage["model_no"] = item.model_no;
-        localStorage["model_name"] = item.model_name;
-        localStorage["qty"] = item.qty;
-        localStorage["description"] = item.description;
-        localStorage["picture"] = item.picture;
-        localStorage["price"] = item.price;
-        return <ul class="ProductsListUL" key={item.key} onClick={() => window.location.replace(`http://localhost:8080/orders`)}>
+        return <ul class="ProductsListUL" key={item.key} onClick={() => this.order_func(item)}>
             <div class="container" id="LoginPageJumbotron ProductList">
             <div class="panel panel-primary">
                 <div class="panel-heading">

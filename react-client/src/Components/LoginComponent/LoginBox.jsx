@@ -41,10 +41,10 @@ class LoginBox extends Component {
       localStorage["LoggedIn"] = "false";
     } else {
       window.location.replace('http://localhost:8080/');
-      localStorage["LoggedIn"] = "true";
-      localStorage["name"] = this.state.items[i].name;
-      localStorage["email"] = this.state.items[i].email;
-      localStorage["contact_no"] = this.state.items[i].contact_no;
+      localStorage.setItem("LoggedIn", "true");
+      localStorage.setItem("name", this.state.items[i].name);
+      localStorage.setItem("email", this.state.items[i].email);
+      localStorage.setItem("contact_no", this.state.items[i].contact_no);
      
     }
 

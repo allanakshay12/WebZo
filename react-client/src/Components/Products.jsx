@@ -46,8 +46,8 @@ class Products extends Component {
 
           <br />
           <br />
-          <div class = "container jumbotron">
-            <p id='loginpagesignupoption'>Click <a href='/addproducts' id='loginpagesignupanchor'>here</a> to add more products.</p>
+          <div class = "container">
+            <h2 id='loginpagesignupoption'>Click <a href='/addproducts' id='loginpagesignupanchor'>here</a> to add more products.</h2>
           </div>
         </div>
       

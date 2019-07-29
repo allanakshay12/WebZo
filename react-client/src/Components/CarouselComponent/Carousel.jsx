@@ -7,6 +7,7 @@ class Carousel extends Component {
     return (
       <div class="container CarouselContainer">
         <h2>Our Product Highlights</h2>
+        <br />
         <div id="myCarousel" class="carousel slide ProductCarousel" data-ride="carousel">
           {/*<!-- Indicators -->*/}
           <ol class="carousel-indicators">
@@ -19,7 +20,7 @@ class Carousel extends Component {
           <div class="carousel-inner ProductCarousel">
       
             <div class="item active">
-              <img src={ProductCarousel1} alt="Los Angeles" class="ProductCarouselImage" />
+              <img src={ProductCarousel1} alt="Los Angeles" class="ProductCarouselImage" height = "100px"/>
               <div class="carousel-caption">
                 <h3>Hercules Roadeo</h3>
                 <p>Find the youth within you!!</p>

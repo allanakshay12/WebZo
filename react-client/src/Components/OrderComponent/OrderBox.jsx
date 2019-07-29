@@ -18,10 +18,10 @@ class OrderBox extends Component {
         if(this._InputAddress.value !== "") {
           var newItem = {
             transaction_id: Math.random(),
-            name: localStorage["name"],
-            email: localStorage["email"],
-            contact: localStorage["contact_no"],
-            model_no: localStorage["model_no"],
+            name: localStorage.getItem("name"),
+            email: localStorage.getItem("email"),
+            contact: localStorage.getItem("contact_no"),
+            model_no: localStorage.getItem("model_no"),
             address: this._InputAddress.value,
             key: Date.now()
           };
@@ -44,14 +44,15 @@ class OrderBox extends Component {
             <div class="jumbotron">
             <h2>Order Details</h2>
             <br />
-            <h4>{localStorage["model_name"]}</h4>
+            <h4>Name : {localStorage["model_name"]}</h4>
             <br />
-            <h4>{localStorage["description"]}</h4>
+            <h4>Description : {localStorage["description"]}</h4>
             <br />
             <h4>Price / Hour : {localStorage["price"]}</h4>
             <br />
+            <br />
               <form onSubmit={this.addItem}>
-                <img src={localStorage["picture"]} width="100%" />
+                <img id="order_image" src={localStorage["picture"]} width="100%" />
                 <br />
                 <br />
                 <div class="form-group">
